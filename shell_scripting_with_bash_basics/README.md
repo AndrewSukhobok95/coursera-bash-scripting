@@ -167,7 +167,7 @@ echo $(( $a / $b ))
 ```
 
 
-# Functions
+## Functions
 
 ```sh
 function sayHello() {
@@ -228,7 +228,7 @@ sumOrSurstract 1 + 5
 ```
 
 
-# Files
+## Files
 
 - `-f` : Check if file is a file.
 - `-d` : Check if directory is a directory.
