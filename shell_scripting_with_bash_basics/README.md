@@ -151,6 +151,72 @@ echo $(( $a / $b ))
 ```
 
 
+# Functions
+
+```sh
+function sayHello() {
+    echo Hello!
+}
+sayHello
+```
+
+### Function with arguments
+
+```sh
+function sayArguments() {
+    echo $1 $2
+}
+sayArguments said something
+```
+
+### Function with return
+
+- Return is performed through `$?`.
+- Function return values must be in the range [0,255].
+
+```sh
+function returnNumber() {
+    echo "Returned"
+    return 42
+}
+returnNumber
+result=$?
+echo $result
+```
+
+- Alternative way to return any value from function:
+
+```sh
+function returnThroughEcho() {
+    echo "something"
+}
+result=$(returnThroughEcho)
+echo $result
+```
+
+### Example with Arithmetics
+
+```sh
+function sumOrSurstract() {
+    if [ $2 == "+" ]
+    then
+        echo $(( $1 + $3 ))
+    elif [ $2 == "-" ]
+    then
+        echo $(( $1 - $3 ))
+    else
+        echo "Unknown operation"
+    fi
+}
+sumOrSurstract 1 + 5
+```
+
+
+
+
+
+
+
 
 
 
