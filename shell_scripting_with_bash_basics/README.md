@@ -212,8 +212,49 @@ sumOrSurstract 1 + 5
 ```
 
 
+# Files
 
+- `-f` : Check if file is a file.
+- `-d` : Check if directory is a directory.
+- `-e` : Check if file exists.
 
+```sh
+dir=files
+file=$dir/photo.jpg
+
+if [ -f $file ]
+then
+    echo "$file is a file"
+fi
+
+if [ -d $dir ]
+then
+    echo "$dir is a directory"
+fi
+
+if [ -e $file ]
+then
+    echo "$file exists"
+fi
+```
+
+### Example
+
+Function that cat file content if it is a file and list files if it is a directory.
+
+```sh
+function showContent() {
+    if [ -f $1 ]
+    then
+        cat $1
+    elif [ -d $1 ]
+    then
+        ls $1
+    fi
+}
+showContent files
+showContent files/document.txt
+```
 
 
 
