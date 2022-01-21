@@ -90,6 +90,7 @@ fi
 ```
 
 If we use ><=, the bash will compare them as strings.
+
 In order to compare them as numbers, we have to use:
 * `-gt`
 * `-lt`
@@ -136,6 +137,7 @@ done
 ## Arithmetics: Arithmetic Expansion
 
 Simple usage of `+` leads to string concatenation.
+
 So, to perform arithmetic operation, we have to use Arithmetic Expansion: `$(( equation ))`.
 
 ```sh
