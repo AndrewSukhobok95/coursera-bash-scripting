@@ -27,3 +27,111 @@ The hands-on project on Shell Scripting with Bash: Basics is divided into the fo
 - Task 5: Functions and arithmetics
 - Task 6: File conditions
 - Task 7: While loops
+
+
+# Notes from lectures
+
+## Basic Shell Commands
+
+To make file executable, grant x access to it:
+
+```sh
+chmod +x ./hello.sh
+```
+
+Check, what shell you are using:
+
+```sh
+echo $SHELL
+```
+
+## Variables and Parameter Expansion
+
+```sh
+city="Helsinki"
+echo $city
+```
+
+**Parameter expansion** allows to modify the variable on the fly.
+
+```sh
+# 1) Replace a part of the string
+echo ${city/sinki/.}
+# 2) Get substring
+echo ${city:0:5}
+# 3) Get length of the string
+echo ${#city}
+# 4) Set default value if the variable doesn't exist
+echo ${city:-"Default value"}
+```
+
+## User Input
+
+```sh
+read -p "What is you favourite meal? " meal
+echo $meal
+```
+
+
+## Conditions
+
+```sh
+# Double quotes are not necessary
+city="Helsinki"
+
+# Condition
+if [ $city == "Helsinki" ] ; then
+    echo "The city is Helsinki"
+elif [ $city == "Montreal" ] ; then
+    echo "The city is Montreal"
+else
+    echo "The city is neither Helsinki nor Montreal"
+fi
+```
+
+If we use ><=, the bash will compare them as strings.
+In order to compare them as numbers, we have to use:
+* `-gt`
+* `-lt`
+* `-gte`
+* `-lte`
+* `-eq`
+* `-ne`
+
+```sh
+a=5
+b=10
+if [ $a -gt $b ]
+then
+    echo "a > b"
+else
+    echo "a <= b"
+fi
+```
+
+
+## Positional parameters
+
+- `$1`, `$2`, ... - first, second and so on arguments.
+- `$#` - number of given arguments.
+- `$@` - all given arguments.
+
+```sh
+echo $1 $2
+echo $#
+echo $@
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://linuxhint.com/if-else-conditionals-zsh-script/
