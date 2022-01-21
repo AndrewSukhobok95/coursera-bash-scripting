@@ -8,7 +8,8 @@ In this course, we are going to focus on three learning objectives:
 - Master the basic constructs of Bash with lots of hands-on-exercises
 - Learn how to automatically rename a collection of files
 - Read the contents of a file line by line
-- By the end of this course, you will be able to effectively use Bash to write simple shell scripts.
+
+By the end of this course, you will be able to effectively use Bash to write simple shell scripts.
 
 ## Course Structure
 
