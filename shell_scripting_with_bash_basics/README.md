@@ -134,6 +134,22 @@ for arg in $@ ; do
 done
 ```
 
+
+## While loop
+
+Additionally:
+- `read -r` - `-r` allows to ignore `\` (backslash)
+- `printf` - Formatting string.
+- `IFS=` - Separators to trim. By default, it contains whitespaces, tabs, new lines.
+
+```sh
+while IFS= read -r current_line
+do
+    printf "%s\n" "$current_line"
+done < files/document.txt
+```
+
+
 ## Arithmetics: Arithmetic Expansion
 
 Simple usage of `+` leads to string concatenation.
@@ -255,11 +271,6 @@ function showContent() {
 showContent files
 showContent files/document.txt
 ```
-
-
-
-
-
 
 
 # Conditional Operators
