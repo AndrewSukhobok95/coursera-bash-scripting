@@ -123,6 +123,30 @@ echo $@
 ```
 
 
+## For loop
+
+Example: rename the files, that are passed as arguments.
+
+```sh
+for arg in $@ ; do
+    mv files/$arg files/renamed-$arg
+done
+```
+
+## Arithmetics: Arithmetic Expansion
+
+Simple usage of `+` leads to string concatenation.
+So, to perform arithmetic operation, we have to use Arithmetic Expansion: `$(( equation ))`.
+
+```sh
+a=5
+b=10
+echo $a + $b
+echo $(( $a + $b ))
+echo $(( $a - $b ))
+echo $(( $a * $b ))
+echo $(( $a / $b ))
+```
 
 
 
