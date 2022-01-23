@@ -30,7 +30,7 @@ The hands-on project on Shell Scripting with Bash: Basics is divided into the fo
 - Task 7: While loops
 
 
-# Notes from lectures
+# Notes from Lectures
 
 ## Basic Shell Commands
 
